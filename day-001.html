@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wave</title>
+  <style>
+    .frame {
+      background: #002766;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .level1 {
+      background: #69c0ff;
+      left: -50px;
+      bottom: 0;
+      z-index: 999;
+      width: 500px;
+      height: 75px;
+      position: absolute;
+      animation: wave-front 4s ease-in-out alternate infinite;
+    }
+
+    .level1 .circle:nth-child(odd) {
+      background: #69c0ff;
+    }
+
+    .level1 .circle:nth-child(even) {
+      background: #1890ff;
+    }
+
+    @keyframes wave-front {
+      from {
+        transform: translate3d(-35px, 0, 0);
+      }
+
+      to {
+        transform: translate3d(35px, 0, 0);
+      }
+    }
+
+    .level2 {
+      background: #1890ff;
+      left: -25px;
+      bottom: 0;
+      width: 500px;
+      height: 125px;
+      z-index: 998;
+      position: absolute;
+      animation: wave-middle 4s ease-in-out alternate infinite;
+    }
+
+    .level2 .circle:nth-child(odd) {
+      background: #1890ff;
+    }
+
+    .level2 .circle:nth-child(even) {
+      background: #0050b3;
+    }
+
+    @keyframes wave-middle {
+      from {
+        transform: translate3d(17px, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-17px, 0, 0);
+      }
+    }
+
+    .level3 {
+      background: #0050b3;
+      left: -25px;
+      bottom: 0;
+      width: 500px;
+      height: 175px;
+      z-index: 997;
+      position: absolute;
+      animation: wave-back 4s ease-in-out alternate infinite;
+
+
+
+    }
+
+    .level3 .circle:nth-child(odd) {
+      background: #0050b3;
+    }
+
+    .level3 .circle:nth-child(even) {
+      background: #002766;
+    }
+
+    @keyframes wave-back {
+      from {
+        transform: translate3d(-17px, 0, 0);
+      }
+
+      to {
+        transform: translate3d(17px, 0, 0);
+      }
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      float: left;
+      margin-top: -24px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="level1">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="level2">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="level3">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
